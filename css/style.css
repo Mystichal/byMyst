@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*
+* General
+*/
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EEE;
+    display: grid;
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 62px auto 35px;
+}
+
+body > header {
+    grid-area: header;
+    background-color: #392E5C;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+body > section #content {
+    grid-area: content;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+.container {
+    display: block;
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: inline-flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/*
+* Header, container
+*/
+div#logo-container {
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 50px;
+    padding: 6px;
+    margin-left: 6px;
+}
+
+div#logo-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.top-nav-user a h5 {
+    height: 50px;
+    padding: 6px;
+    list-style: none;
+    color: white;
+    float: right;
+    line-height: 50px;
+}
+
+/*
+* Header, container
+*/
+header > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header > nav > ul > li {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all linear 0.1s;
+}
+
+header > nav > ul > li:hover {
+    background-color: #392E5C;
+}
+
+header > nav > ul > li a + div {
+    background-color: #60577C;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 1px rgba(0,0,0,.05);
+    display: none;
+    font-size: 1rem;
+    position: absolute;
+    float: right;
+    width: 170px;
+}
+
+header > nav > ul > li a + div > ul {
+    list-style-type: none;
+}
+
+header > nav > ul > li a + div > ul > li {
+    margin: 0;
+    padding: 0;
+}
+
+header > nav > ul > li a + div > ul > li > a {
+    color: rgba(255,255,255,.9);
+    display: block;
+    padding: .25rem 1.5rem;
+    text-decoration: none;
+}
+
+header > nav > ul > li a + div > ul > li:hover > a {
+    background-color: rgba(0,0,0,.15);
+}
+
+header > nav > ul > li > a {
+    align-items: flex-start;
+    color: #fff;
+    display: flex;
+    padding: 0.9rem 1.5rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    transition: all linear 0.1s;
+}
+
+header > nav > ul > li > a > div > span {
+    color: rgba(255,255,255,.75);
+    display: block;
+}
+
+@media (min-width: 990px) {
+    header > nav > ul > li > a {
+        max-width: 500px;
+        line-height: 2rem;
+    }
+
+    header > nav > ul > li > a > div > span {
+        margin: 4px 0 0;
+    }
+}
+
+/*
+* Login, container
+*/
+.container-login {
+    width: 285px;
+    margin: 0 auto;
+    padding: 40px 40px;
+}
+
+/*
+* Login, avatar
+*/
+.avatar-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 50px auto 25px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*
+* Login, inputs
+*/
+.form-login {
+    margin-top: 20px;
+}
+
+.form-label {
+    font-size: 12px;
+}
+
+input[type = email],
+input[type = password],
+input[type = text],
+.container-login button {
+    height: 26px;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container-login button {
+    cursor: pointer;
+}
+
+.form-h1 {
+    margin-top: 20px;
+}
+
+.form-link {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+/*
+* Devider
+*/
+.divider {
+    text-align: center;
+    position: relative;
+    top: 2px;
+    padding-top: 1px;
+    margin-bottom: 14px;
+    line-height: 0;
+}
+
+.divider h5 {
+    line-height: 1;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    background-color: #F7F7F7;
+    padding: 0 8px 0 7px;
+}
+
+.divider:after {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 1px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    z-index: 0;
+}
+
+/*
+* Link as button
+*/
+.button {
+    display: block;
+    width: 100%;
+    height: 26px;
+    background: lightgray;
+    text-align: center;
+    color: darkgray;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/*
+* Link as button with icon
+*/
+.buttonIcon {
+    display: block;
+    width: 100%;
+    background: lightgray;
+    text-align: center;
+    color: darkgray;
+    z-index: 1;
+    padding: 6px 0;
+}
+
+#copi {
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+/*
+* Index tabs
+*/
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-top: 9px;
+}
+
+/*
+* Style the buttons inside the tab
+*/
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/*
+* Change background color of buttons on hover
+*/
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/*
+* Create an active/current tab link class
+*/
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/*
+* Style the tab content
+*/
+.tabcontent {
+    display: none;
+}
+
+/*
+* User list
+*/
+.module {
+    margin: 15px 9px;
+}
+
+.container-list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#userList {
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    width: 1%;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and  (max-device-width: 1024px) {
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Email"
+    }
+
+    td:nth-of-type(2):before {
+        content: "Status"
+    }
+
+    td:nth-of-type(3):before {
+        content: "Registation date"
+    }
+}

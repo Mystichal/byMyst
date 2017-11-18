@@ -1,0 +1,5 @@
+session check true|false
+true:
+    continue
+false:
+    send to login page
